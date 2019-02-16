@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      RESUME BUILDER
+    </header>
+      <a href="form.html"><img src="images/plus.svg"></a>
+    <section class="parent">
+
+    </section>
+  </body>
+</html>
+<script type="text/javascript" src="main.js">
+
+</script>
+
+<!-- serviceWorker -->
+<script type="text/javascript">
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register("sw.js")
+  .then(function(register){
+    register.addEventListener('update found',function(){
+      var installingsw=register.installing;
+      console.log("serviceworker is installing",installingsw);
+    });
+  })
+  .catch(function(e){
+    console.log("error"+e);
+  });
+}
+else{
+  console.log("serviceworker is not supporting");
+}
+
+</script>
